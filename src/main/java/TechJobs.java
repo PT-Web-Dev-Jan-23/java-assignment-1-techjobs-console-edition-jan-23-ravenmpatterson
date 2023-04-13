@@ -1,6 +1,5 @@
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Map;
 import java.util.Scanner;
 
 /**
@@ -9,6 +8,7 @@ import java.util.Scanner;
 public class TechJobs {
 
     static Scanner in = new Scanner(System.in);
+    private static ArrayList<HashMap<String, String>> someJobs;
 
     public static void main (String[] args) {
 
@@ -117,9 +117,33 @@ public class TechJobs {
         return choiceKeys[choiceIdx];
     }
 
-    // Print a list of jobs
+    // Print a list of jobs - Done not working
     private static void printJobs(ArrayList<HashMap<String, String>> someJobs) {
+        TechJobs.someJobs = someJobs;
+//        if (someJobs.size() == 0) {
+          if (someJobs.isEmpty()) {
+            System.out.println("No Results");
+        } else {
+              for (HashMap<String, String> aJob : someJobs) {
+                  System.out.println("*****");
+                  for (String jobKey : aJob.keySet()) {
+                      System.out.println(jobKey + ": " + aJob.get(jobKey));
+                  }
+                  System.out.println("*****\n");
+              }
+          }
+//            for (int i = 0; i < someJobs.size(); i++) {
+//                System.out.println("*****");
+//                for (Map.Entry<String, String> entry : someJobs.get(i).entrySet()) {
+//                    String key = entry.getKey();
+//                    Object value = entry.getValue();
+//
+//                    System.out.println(key + ": " + value);
+//                }
+//                System.out.println("*****\n");
+//            }
+//        }
 
-        System.out.println("printJobs is not implemented yet");
+//        System.out.println("printJobs is not implemented yet");
     }
 }
