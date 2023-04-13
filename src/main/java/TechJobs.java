@@ -122,14 +122,14 @@ public class TechJobs {
         TechJobs.someJobs = someJobs;
 //        if (someJobs.size() == 0) {
           if (someJobs.isEmpty()) {
-            System.out.println("No Results");
+            System.out.print("No Results");
         } else {
               for (HashMap<String, String> aJob : someJobs) {
-                  System.out.println("*****");
+                  System.out.println("\n*****");
                   for (String jobKey : aJob.keySet()) {
                       System.out.println(jobKey + ": " + aJob.get(jobKey));
                   }
-                  System.out.println("*****\n");
+                  System.out.println("*****");
               }
           }
 //            for (int i = 0; i < someJobs.size(); i++) {
